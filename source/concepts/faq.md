@@ -66,12 +66,13 @@ Nixpkgs and NixOS have both stable and rolling releases.
 
 ### Stable
 
-- On Linux (including NixOS and WSL), use [`nixos-*`](https://github.com/NixOS/nixpkgs/branches/all?query=nixos-).
+- On macOS/Darwin, use [nixpkgs-*-darwin](https://github.com/NixOS/nixpkgs/branches/all?query=nixpkgs-)
 
-  These branches only contain commits that passed the NixOS test suite.
-- On any other platform, use [`nixpkgs-*`](https://github.com/NixOS/nixpkgs/branches/all?query=nixpkgs-).
+  These branches point to commits where most Darwin packages can be substituted and don't have to be built.
+- On any other platform, use [`nixos-*`](https://github.com/NixOS/nixpkgs/branches/all?query=nixos-).
 
-  These branches contain commits that passed the test suites specific to other platforms.
+  These branches point to commits where most Linux packages can be substituted and don't have to be built.
+  Furthermore, these commits passed the basic NixOS test suite.
 
 All of these "channel branches" follow the corresponding [`release-*`](https://github.com/NixOS/nixpkgs/branches/all?query=release-) branch.
 
