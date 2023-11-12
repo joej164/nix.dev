@@ -69,9 +69,10 @@
 
         devShells.default = pkgs.mkShell {
           inputsFrom = [ self.packages.${system}.default ];
-          packages = with pkgs.python310.pkgs; [
-            black
+          packages = [
             devmode
+            pkgs.python310.pkgs.black
+            pkgs.vale
           ];
         };
       }
